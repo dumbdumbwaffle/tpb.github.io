@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PaperBunny404</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Press+Start+2P&family=Titillium+Web:wght@200&family=Turret+Road:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div id="container"></div>
+        <nav>
+            <ul>
+               <a href="https://thepaperbunny.com/" target="_blank">
+                  <img src="IMG/tpb-logo.avif">
+              </a>
+                <li><a href="index.html">New</a></li>
+                <li><a href="index.html">Bestsellers</a></li>
+                <li><a href="index.html">Bags</a></li>
+                <li><a href="index.html">Wear</a></li>
+                <li><a href="index.html">Accessories</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Wellness</a></li>
+                <li><a href="index.html">Kids</a></li>
+                <li><a href="index.html">Desk & Stationary</a></li>
+                <li><a href="index.html">Gifts</a></li>
+                <li><a href="index.html">Sales</a></li>
+                <a href="#" class="Icons"><img src="IMG/Search - Noun Project.png" alt=""></a>
+                <a href="#" class="Icons" ><img src="IMG/icon.png" alt=""></a>
+                <a href="#" class="Icons"><img src="IMG/shopping.png" alt=""></a>
+            </ul>
+        </nav>
+    </header>
+
+<section>
+    <div class="error-page">
+        <div class="error-banner">
+          <div class="error-text">
+            <span class="digit">4</span>
+            <span class="icon"></span>
+            <span class="digit">4</span>
+          </div>
+          <p class="message">Uh-oh! Some Bunny Hopped Too Far</p>
+          <a href="#" class="go-back-btn">Hop Back To Safety</a>
+        </div>
+      </div>
+</section>
+
+<div id="page">
+
+  <div id="Message-Container">
+    <div id="message">
+      <h1>Congratulations!</h1>
+      <p>You are done.</p>
+      <p id="moves"></p>
+      <input id="okBtn" type="button" onclick="toggleVisablity('Message-Container')" value="Cool!" />
+    </div>
+  </div>
+
+  <br>
+  <div id="menu">
+    <div class="custom-select">
+      <select id="diffSelect">
+                <option value="10">Easy</option>
+                <option value="15">Medium</option>
+                <option value="25">Hard</option>
+                <option value="38">Extreme</option>                                      
+            </select>
+    </div>
+    <input id="startMazeBtn" type="button" onclick="makeMaze()" value="Start" />
+  </div>
+
+  <div id="view">
+    <div id="mazeContainer">
+      <canvas id="mazeCanvas" class="border" height="1100" width="1100"></canvas>
+    </div>
+  </div>
+
+  <p id="instructions">Use arrow keys to move the key to the house!</p>
+
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+
+<script src="./script.js"></script>
+
+<footer class="footer">
+  <div class="footer-description">
+    <p>
+      The Paper Bunny is a lifestyle brand that combines function and aesthetic to offer thoughtful pieces designed for intentional everyday living.
+    </p>
+  </div>
+  <div class="footer-links">
+    <ul>
+      <li><a href="#">ABOUT US</a></li>
+      <li><a href="#">WHERE YOU CAN FIND US</a></li>
+      <li><a href="#">CAREERS</a></li>
+      <li><a href="#">SUSTAINABILITY</a></li>
+      <li><a href="#">CONTACT US</a></li>
+      <li><a href="#">CORPORATE</a></li>
+    </ul>
+    <ul>
+      <li><a href="#">FAQS</a></li>
+      <li><a href="#">THE TPB BAG SIZE GUIDE</a></li>
+      <li><a href="#">SHIPPING POLICY</a></li>
+      <li><a href="#">RETURNS AND REFUND</a></li>
+      <li><a href="#">TERMS OF SERVICE</a></li>
+      <li><a href="#">PRIVACY POLICY</a></li>
+    </ul>
+    <ul>
+      <li><a href="#">INSTAGRAM</a></li>
+      <li><a href="#">TIKTOK</a></li>
+      <li><a href="#">FACEBOOK</a></li>
+    </ul>
+  </div>
+  <div class="footer-newsletter">
+    <p>Get 10% off, exclusive access to launches,</p>
+    <p>sales, events and more!</p>
+    <input type="email" placeholder="your@address.com">
+    <button>SUBMIT</button>
+  </div>
+  <div class="footer-bottom">
+    <a href="#">Singapore / International</a>
+    <div>© 2024. The Paper Bunny is a registered trademark of TPB Collective Pte Ltd. All rights reserved.</div>
+  </div>
+</footer>
+<div class="club-button">Club TPB</div>
+
+
+</body>
