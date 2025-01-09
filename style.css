@@ -1,0 +1,386 @@
+/* Ensure the body is properly styled */
+body {
+  background: #f8f7f6 ;
+  font-family: 'Montserrat', 'Playfair Display', 'Lora', 'larken light';
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+#logo{
+  margin-right: 200px;
+  height: 22px;
+}
+/* Navigation bar styling */
+nav {
+  background: #f8f7f6 ;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  margin: 15px;
+  padding: 10px 10px;
+  list-style-type: none;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 12px;
+  padding: 0;
+  position: relative; /* Required for the pseudo-element */
+}
+
+nav li a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Position the underline just below the text */
+  left: 0;
+  width: 0;
+  height: 2px; /* Thickness of the underline */
+  background: #333; /* Color of the underline */
+  transition: width 0.3s ease; /* Smooth animation */
+}
+
+nav li a:hover::after {
+  width: 100%; /* Expands the underline to full width */
+}
+
+nav ul img{
+  padding-right:210px ;
+  width: 150px;
+  height: auto;
+}
+
+nav ul .Icons img{
+  width: 30px;
+  padding: 0px;
+  align-items:right;
+}
+
+
+/* Style for error page */
+.error-page {
+  margin-top: 80px; /* Adjust to account for nav bar height */
+  text-align: center;
+  padding: 20px;
+}
+
+.error-banner {
+  display: inline-block;
+  position: relative;
+}
+
+.error-text {
+  font-size: 20rem;
+  font-family: 'larken light';
+  color: #d16542;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.digit {
+  font-weight: lighter;
+}
+
+.icon {
+  background: url('IMG/tpb.gif') no-repeat center;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  display: inline-block;
+  background-size: contain;
+}
+
+.message {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 20px 0;
+ 
+  
+}
+
+.go-back-btn {
+  display: inline-block;
+  padding: 15px 25px;
+  background-color: black;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0;
+  border: 40px;
+  font-size: 13px;
+  transition: background-color 0.3s ease;
+}
+
+.go-back-btn:hover {
+  background-color: #d16542;
+}
+
+/*maze game*/
+
+#view {
+  margin-top: 30px;
+}
+
+#mazeContainer {
+  top: 15px;
+  opacity: 0;
+  display: inline-block;
+  margin: auto;
+  border-radius: 10px;
+}
+#mazeContainer #mazeCanvas {
+  margin: 0;
+  display: block;
+  border: solid 2px black;
+  height: 400px;
+}
+input, select {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.30);
+  height: 45px;
+  width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  appearance: none;
+}
+input:hover, select:hover {
+background-color: rgba(0, 0, 0, 0.70);
+}
+input:active, select:active {
+background-color: black;
+}
+input:focus, select:focus {
+outline: none;
+}
+.custom-select {
+display: inline-block;
+}
+.custom-select select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: 125px center;
+}
+#Message-Container {
+  visibility: hidden;
+  color: white;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.30);
+  z-index: 1;
+}
+#Message-Container #message {
+  width: 300px;
+  height: 300px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -150px;
+}
+#page {
+text-align: center;
+height: auto;
+width: auto;
+margin: auto;
+}
+#page #menu {
+  margin: auto;
+  padding: 50px;
+  height: 65px;
+  box-sizing: border-box;
+}
+#page #menu h1 {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 3.2rem;
+}
+#page #view {
+  position: absolute;
+  top: 65px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+}
+.border {
+  border: 10px black solid;
+  border-radius: 10px;
+}
+
+#instructions {
+  margin-top: 425px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 400px) {
+input, select {
+    width: 120px;
+}
+}
+
+
+
+.footer {
+  background-color: #f8f8f8;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-description {
+  flex: 1;
+  max-width: 35%;
+  margin-bottom: 50px;
+  margin-top: 70px;
+  
+}
+
+.footer-description p {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.2;
+  font-family: 'larken light';
+}
+
+.footer-links {
+  display: flex;
+  flex: 1;
+  max-width: 50%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px;
+  margin-top: 70px;
+  
+}
+
+.footer-links ul li {
+  margin: 6px 0;
+  padding-right: 90px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 11px;
+  line-height: 1.6;
+  position: relative; /* Required for the pseudo-element */
+}
+
+.footer-links ul li a:after {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Position the underline just below the text */
+  left: 0;
+  width: 0;
+  height: 2px; /* Thickness of the underline */
+  background: #333; /* Color of the underline */
+  transition: width 0.3s ease; /* Smooth animation */
+}
+
+.footer-links ul li a:hover:after {
+  width: 100%; /* Expands the underline to full width */
+}
+
+.footer-newsletter {
+  margin-top: 40px;
+  flex-basis: 100%;
+  text-align:left;
+}
+
+
+.footer-newsletter input[type="email"] {
+  padding: 18px;
+  width: 200px;
+  border: 1px solid;
+  font-size: 10px;
+  text-align: center;
+
+}
+
+.footer-newsletter button {
+  padding: 15px 35px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.footer-newsletter button:hover {
+  background-color:#d16542;
+}
+
+.footer-newsletter p {
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: #555;
+}
+
+.footer-bottom a {
+  text-decoration: none;
+  color: #555;
+}
+
+.club-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #553e2f ;
+  color: white;
+  padding: 20px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  background-image: url('IMG/sparkle tpg.png');
+  background-repeat: no-repeat;
+  background-position:25px center;
+  background-size: 20px; /* Adjust size of the image */
+  padding-right: 30px; /* Add space for the image */
+  padding-left: 60px;
+}
